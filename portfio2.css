@@ -1,0 +1,104 @@
+* {
+
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'arial';
+}
+
+header {
+    height: 300px;
+    width: 100%;
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/003/830/526/large/mayank-kumar-riri-wlliams-invincible-iron-man.jpg?1477751616);
+    background-size: cover;
+    background-position: center 50%;
+
+}
+
+.navbar {
+    position: absolute;
+
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+
+
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.navbar .nav-links ul {
+    display: flex;
+}
+
+.navbar .nav-links ul li {
+    margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+    color: rgb(137, 77, 221);
+    font-weight: 600;
+
+}
+
+.hero-title {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -5%);
+    text-align: center;
+    color: white;
+}
+
+.hero-title h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    padding: 40px;
+}
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    max-width: 650px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.content h3 {
+    margin: 0 0 10px;
+}
+
+.content p {
+    margin: 0;
+    color: #555;
+    line-height: 1.6;
+}

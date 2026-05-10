@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet réalisé</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #111;
+        }
+
+        /* NAV */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: #fff;
+        }
+
+        nav .btn {
+            background: #111;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 20px;
+        }
+
+        /* HERO */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 60px;
+            background: #fff;
+        }
+
+        .hero-text {
+            max-width: 500px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .hero button {
+            background: #37332f;
+            border: none;
+            padding: 10px 22px;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+
+
+        .hero img {
+            width: 350px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+
+        /* BIG CARD */
+        .big-card {
+            margin: 40px 60px;
+            border-radius: 25px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .big-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .big-card .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .big-card h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .btn-custom {
+            display: inline-block;
+            background: #37332f;
+            border: none;
+            padding: 10px 22px;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            text-decoration: none;
+            /* enlève le bleu + soulignement */
+        }
+
+        .btn-custom:hover {
+            opacity: 0.8;
+        }
+
+        button {
+            background: #37332f;
+            border: none;
+            padding: 10px 22px;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* TEAM */
+        /* =========================
+CARDS MODERNES
+========================= */
+
+        .cards-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+
+            padding: 60px;
+            background: #081120;
+        }
+
+        .modern-card {
+            background: #0f172a;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            border-radius: 22px;
+
+            overflow: hidden;
+
+            transition: 0.3s ease;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .modern-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+        }
+
+        .modern-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+
+            padding: 15px;
+            border-radius: 25px;
+        }
+
+        .card-content {
+            padding: 0 20px 20px;
+        }
+
+        .card-content h3 {
+            color: white;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            color: #94a3b8;
+            font-size: 15px;
+            line-height: 1.5;
+
+            margin-bottom: 20px;
+        }
+
+        .card-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.08);
+
+            color: #cbd5e1;
+
+            padding: 8px 14px;
+
+            border-radius: 999px;
+
+            font-size: 14px;
+        }
+
+        .modern-card button {
+            background: #1e293b;
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            color: white;
+
+            padding: 12px 20px;
+
+            border-radius: 14px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .modern-card button:hover {
+            background: #334155;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 1000px) {
+
+            .cards-section {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        /* ARTICLES */
+
+
+
+        /* =========================
+SECTION PROJETS MODERNE
+========================= */
+
+        .project-section {
+            padding: 80px 60px;
+            background: #081120;
+        }
+
+        .project-title {
+            color: white;
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .project-subtitle {
+            color: #94a3b8;
+            max-width: 1000px;
+            line-height: 1.7;
+            margin-bottom: 50px;
+        }
+
+        /* GRID */
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        /* CARD */
+
+        .project-card {
+            background: #0f172a;
+
+            border-radius: 24px;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(255, 255, 255, 0.08);
+
+            transition: 0.3s ease;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* IMAGE */
+
+        .project-card img {
+            width: 100%;
+            height: 240px;
+
+            object-fit: cover;
+
+            padding: 15px;
+
+            border-radius: 25px;
+        }
+
+        /* CONTENU */
+
+        .project-content {
+            padding: 0 25px 25px;
+        }
+
+        .project-content h3 {
+            color: white;
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+        .project-content p {
+            color: #94a3b8;
+
+            line-height: 1.7;
+
+            margin-bottom: 25px;
+        }
+
+        /* BAS CARD */
+
+        .project-bottom {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+        /* TAG */
+
+        .project-tag {
+            background: rgba(255, 255, 255, 0.08);
+
+            color: #cbd5e1;
+
+            padding: 8px 14px;
+
+            border-radius: 999px;
+
+            font-size: 14px;
+        }
+
+        /* BUTTON */
+
+        .project-card button {
+            background: #1e293b;
+
+            color: white;
+
+            border: none;
+
+            padding: 12px 20px;
+
+            border-radius: 14px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .project-card button:hover {
+            background: #334155;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 900px) {
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Porfolio</h2>
+        <button>Contacter</button>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Projet réaliser</h1>
+            <p>Voici les projets que j'ai réalisés au cours de l'année .</p>
+            <button>Accueil</button>
+        </div>
+
+        <img src="https://i.pinimg.com/1200x/90/73/74/907374231748636a1fc60025d5b6dcc0.jpg">
+    </section>
+
+    <section class="big-card">
+        <img src="https://i.pinimg.com/1200x/c7/10/75/c710754a4f7e13de70e2b9dfec05ecf9.jpg">
+        <div class="overlay">
+            <h2>Let's grow your brand together!</h2>
+
+        </div>
+    </section>
+
+
+
+    <!-- <a href="https://oceanekalala.gefor.com/front_page/?kubio-preview=saved&kubio-random=Vmb0AxiCS-aGSJ1OkrLr"
+   target="_blank"
+   class="btn-custom">
+   Voir
+</a></div> --></div>
+
+    <section class="cards-section">
+
+        <div class="modern-card">
+            <img src="https://i.pinimg.com/1200x/8a/63/63/8a6363c773e3e5e8eb63ca12de172e7e.jpg" alt="">
+
+            <div class="card-content">
+                <h3>CMS WordPress</h3>
+                <p>Création et gestion d’un site dynamique avec WordPress.</p>
+
+                <div class="card-bottom">
+                    <span class="tag">Projet Web</span>
+                    <button>Voir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modern-card">
+            <img src="https://i.pinimg.com/1200x/23/07/50/230750f99a060723e2ef562909b34eed.jpg" alt="">
+
+            <div class="card-content">
+                <h3>Gefor Tourisme</h3>
+                <p>Développement et administration d’une plateforme touristique.</p>
+
+                <div class="card-bottom">
+                    <span class="tag">Développement</span>
+                    <button>Voir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="modern-card">
+            <img src="https://i.pinimg.com/736x/ca/bc/c2/cabcc21033c35994df311c6478ce2520.jpg" alt="">
+
+            <div class="card-content">
+                <h3>Ticket GLPI</h3>
+                <p>Gestion de tickets et support informatique avec GLPI.</p>
+
+                <div class="card-bottom">
+                    <span class="tag">Support</span>
+                    <button>Voir</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="project-section">
+
+        <h2 class="project-title">Les projets réalisés</h2>
+
+        <p class="project-subtitle">
+            Durant cette année, j’ai réalisé différents projets liés au domaine de l’informatique.
+            J’ai notamment travaillé sur des projets orientés réseau, sécurité et développement.
+        </p>
+
+        <div class="project-grid">
+
+            <!-- CARD 1 -->
+            <div class="project-card">
+
+                <img src="https://i.pinimg.com/736x/58/59/c8/5859c8bcf38d6d63961f95f0b17f8f5d.jpg" alt="Linux">
+
+                <div class="project-content">
+
+                    <h3>Projet Ubuntu & SSH</h3>
+
+                    <p>
+                        Création d’une machine virtuelle Ubuntu avec VirtualBox,
+                        configuration réseau et accès distant sécurisé via SSH.
+                    </p>
+
+                    <div class="project-bottom">
+                        <span class="project-tag">Cybersécurité</span>
+                        <button>Voir</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="project-card">
+
+                <img src="https://i.pinimg.com/736x/f7/22/13/f722136c0068f4e68dc6c07d7f584a16.jpg" alt="Emargement">
+
+                <div class="project-content">
+
+                    <h3>Projet d'émargement</h3>
+
+                    <p>
+                        Mise en place d’un système électronique permettant
+                        la gestion et le suivi des présences des employés.
+                    </p>
+
+                    <div class="project-bottom">
+                        <span class="project-tag">Développement</span>
+                        <button>Voir</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2026 Portfolio Océane </p>
+    </footer>
+
+</body>
+
+</html>

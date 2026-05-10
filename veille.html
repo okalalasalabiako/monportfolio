@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille technologique</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #333;
+
+
+            padding-top: 100px;
+
+        }
+
+        /* NAVBAR */
+        /* NAVBAR */
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 20px 60px;
+
+            background: rgba(255, 255, 255, 0.9);
+
+            backdrop-filter: blur(10px);
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+            z-index: 1000;
+        }
+
+        /* LOGO */
+        nav h1 {
+            font-weight: bold;
+            color: #32281d;
+        }
+
+        /* MENU */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        /* LIENS */
+        nav a {
+            text-decoration: none;
+            /* enlève le soulignement de base */
+            color: #32281d;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        /* HOVER SIMPLE */
+        nav a:hover {
+            color: #c49a6c;
+        }
+
+        /* BOUTON */
+        nav button {
+            background: #c49a6c;
+            border: none;
+            padding: 10px 22px;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        nav button:hover {
+            opacity: 0.8;
+        }
+
+        /* HERO */
+        .hero {
+            margin: 20px auto;
+            width: 90%;
+            height: 400px;
+            border-radius: 20px;
+            background: url('https://i.pinimg.com/1200x/2f/50/0f/2f500ffbbf4f2514240588f9f5b5f3a6.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            color: white;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            border-radius: 20px;
+        }
+
+        .hero-text {
+            position: relative;
+            max-width: 400px;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        /* SECTION */
+        .section {
+            width: 90%;
+            margin: 40px auto;
+            display: flex;
+            gap: 20px;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 20px;
+            flex: 1;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .veille-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .veille-list li {
+            background: #fff;
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* STATS */
+        .stats {
+            background: #32281d;
+            color: white;
+        }
+
+        .stats h2 {
+            font-size: 40px;
+        }
+
+        /* TITLE */
+        .title {
+            width: 90%;
+            margin: auto;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        button {
+            background: #c49a6c;
+            border: none;
+            padding: 10px 22px;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .portfolio-card {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .portfolio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .portfolio-card h3 {
+            margin-bottom: 15px;
+        }
+
+        /* grande carte */
+
+        .large {
+            grid-column: span 1;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <h1>Océane</h1>
+        <div class="nav-links">
+            <ul>
+
+                <li><a href="index.html">Accueil</a></li>
+
+                <li><a href="#veille">Veille</a></li>
+
+                <li><a href="#feedly">Feedly</a></li>
+
+                <li><a href="#programmes">Programmes</a></li>
+
+            </ul>
+        </div>
+        <button><a href="index.html">Accueil</a></button>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-text">
+            <h2>Veille technologique</h2>
+            <p>Restez informé des dernières innovations et tendances du secteur.</p>
+        </div>
+    </div>
+
+    <section id="veille"></section>
+    <div class="title">Evolutions, innovations et tendances technologiques</div><br><br>
+
+    <div class="portfolio-card">
+        <h3>Veille technologique</h3>
+
+        <p>
+            La veille technologique est une démarche organisée et continue qui consiste à surveiller, collecter,
+            analyser et
+            exploiter les informations liées aux évolutions techniques d’un domaine spécifique. Elle permet aux
+            entreprises,
+            aux développeurs et aux professionnels du numérique de rester informés des innovations, des nouveaux
+            outils,
+            des mises à jour logicielles et des tendances émergentes. Dans un secteur en constante évolution comme
+            l’informatique,
+            cette pratique est essentielle pour anticiper les changements, adapter ses compétences et prendredes
+            décisions
+            stratégiques éclairées. Par exemple, suivre les évolutions de technologies comme Laravel, React ou
+            Docker
+            permet de
+            choisir les solutions les plus adaptées à un projet et d’éviter l’obsolescence. La veille technologique
+            repose sur
+            l’utilisation de différents outils (flux RSS, newsletters, réseaux professionnels, plateformes
+            spécialisées)
+            et
+            nécessite une sélection rigoureuse des sources afin de garantir la pertinence et la fiabilité des
+            informations.
+            Elle constitue ainsi un levier essentiel d’innovation, de compétitivité et d’adaptation dans un
+            environnement
+            technologique en perpétuel changement.
+        </p><br><br>
+
+        <button>En savoir plus</button>
+
+    </div> <br><br>
+    </section>
+
+    <!-- SECTION -->
+
+    <section id="feedly">
+
+        <h2 class="title">Feedly</h2>
+        <div class="section">
+
+            <div class="card stats">
+                <h3>Objectifs</h3><br>
+                <p>Dans le cadre de mon BTS SIO SLAM, je réalise une veille technologique afin de suivre les évolutions
+                    de
+                    l’intelligence artificielle
+                    et de la cybersécurité. Cela me permet de rester informé sur les innovations, les vulnérabilités et
+                    les
+                    nouvelles tendances du
+                    secteur numérique.</p><br><br>
+
+                <h3>L'intelligence artificielle</h3><br>
+                <p>L’intelligence artificielle (IA) désigne l’ensemble des techniques permettant à des machines de
+                    simuler
+                    certaines capacités humaines comme
+                    l’apprentissage, le raisonnement ou la prise de décision. Ce concept apparaît dès les années 1950,
+                    notamment avec les travaux d’Alan Turing,
+                    considéré comme l’un des précurseurs du domaine. Au fil des décennies, l’IA a connu plusieurs phases
+                    d’évolution, passant de simples
+                    programmes logiques à des systèmes complexes basés sur le machine learning et le deep learning.
+                    Aujourd’hui, grâce à l’augmentation
+                    de la puissance de calcul et à l’accès massif aux données, l’IA s’est largement développée et
+                    s’intègre
+                    dans de nombreux domaines comme
+                    la santé, la finance ou encore la cybersécurité. Elle représente un véritable bouleversement
+                    technologique et sociétal, transformant les
+                    métiers, les usages numériques et les interactions entre l’homme et la machine, tout en soulevant
+                    des
+                    enjeux éthiques et sécuritaires
+                    importants.</p>
+                <br>
+
+
+            </div>
+
+            <div class="card">
+                <h3>Feedly</h3> <br>
+                <p>Dans un contexte de transformation numérique, je mène une veille technologique
+                    centrée sur l’intelligence artificielle et la cybersécurité afin d’identifier les
+                    innovations majeures et les nouvelles vulnérabilités.Cette démarche me permet de
+                    suivre l’évolution rapide des technologies, de comprendre les enjeux liés à la
+                    protection des données et d’anticiper les menaces émergentes. Pour cela, je m’appuie
+                    sur différents outils et sources d’information tels que la plateforme Feedly, la presse
+                    en ligne comme Le Parisien, le réseau social X (anciennement Twitter), ainsi que
+                    diverses newsletters spécialisées. Ces ressources me permettent d’obtenir une information
+                    variée, actualisée et pertinente, essentielle pour rester informé et développer mes
+                    compétences dans ces domaines en constante évolution. </p><br>
+                <p>En utilisant Feedly, je peux organiser ma veille de manière efficace en regroupant les flux
+                    d’information
+                    provenant
+                    de différentes sources, ce qui me permet de suivre les dernières tendances et les innovations dans
+                    le
+                    domaine de
+                    l’intelligence artificielle et de la cybersécurité. De plus, en consultant régulièrement des sources
+                    fiables
+                    telles que Le Parisien et en suivant des experts sur X, je peux rester informé des développements
+                    récents,
+                    des nouvelles vulnérabilités et des meilleures pratiques en matière de sécurité numérique.
+                    Cette veille technologique est essentielle pour anticiper les risques, comprendre les enjeux
+                    actuels du numérique et adapter mes compétences aux évolutions rapides du secteur.</p> <br>
+
+                <button
+                    onclick="window.open('https://feedly.com/i/collection/content/user/68ae74c4-31b5-4109-acba-cf06048f40d2/category/3bcc5b89-2124-45a9-89dc-1cf0fcbcf6f2', '_blank')">
+                    Feedly
+                </button>
+
+
+            </div>
+
+            <div class="card">
+                <img
+                    src="https://imjustcreative.com/wp-content/uploads/2020/04/Feedly-Logo-App-Icon-MockUp-Poster-The-Logo-Smith-2048x1488.jpg">
+                <img src="https://i.pinimg.com/736x/05/62/89/0562899350dd5d07e5e90620c04a1f54.jpg">
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="programmes">
+        <div class="title">Programmes</div>
+
+
+        <div class="section">
+
+            <div class="card">
+                <img src="https://i.pinimg.com/736x/ad/89/42/ad89425656360d1b7faad649411b249b.jpg">
+
+            </div>
+
+            <div class="card">
+                <h3>Sujet</h3><br><br>
+                <p>“Ma veille technologique porte sur l’intelligence artificielle et la cybersécurité.
+                    J’ai choisi ce sujet car ces deux domaines sont aujourd’hui très liés, notamment avec l’évolution
+                    des
+                    attaques informatiques.” <br><br>
+
+                    “Pour réaliser ma veille, j’utilise plusieurs outils comme
+                    Feedly pour suivre des articles, Google Alerts pour recevoir des notifications,
+                    et des sites spécialisés en cybersécurité.” <br><br>
+
+                    “J’ai pu observer que l’intelligence artificielle est de plus en plus utilisée dans la
+                    cybersécurité.
+                    D’un côté, elle permet de détecter
+                    les attaques plus rapidement, par exemple en analysant les comportements suspects sur un réseau.
+                    Mais
+                    d’un autre côté,
+                    elle est aussi utilisée par les hackers, notamment pour créer des attaques plus sophistiquées comme
+                    le
+                    phishing automatisé ou les deepfakes.” <br><br>
+
+                    <strong> Par exemples:</strong>
+                <ul>
+                    <li> Génération de faux mails réalistes </li>
+                    <li> Détection d’anomalies grâce à l’IA </li>
+
+                </ul> <br>
+
+                “Pour conclure cette veille m’a permis de mieux comprendre les enjeux actuels de la cybersécurité et
+                l’importance de
+                l’intelligence artificielle dans ce domaine.
+                C’est un sujet que je souhaite approfondir dans la suite de mon parcours.”
+
+
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        // Petit effet au scroll
+        window.addEventListener("scroll", () => {
+            document.querySelectorAll(".card").forEach(card => {
+                let top = card.getBoundingClientRect().top;
+                if (top < window.innerHeight - 50) {
+                    card.style.transform = "translateY(0)";
+                    card.style.opacity = "1";
+                }
+            });
+        });
+
+        // Animation initiale
+        document.querySelectorAll(".card").forEach(card => {
+            card.style.transform = "translateY(50px)";
+            card.style.opacity = "0";
+            card.style.transition = "0.6s";
+        });
+
+
+        window.addEventListener("scroll", function () {
+
+            const nav = document.querySelector("nav");
+
+            if (window.scrollY > 50) {
+
+                nav.style.background = "rgba(255,255,255,0.95)";
+                nav.style.padding = "15px 60px";
+
+            } else {
+
+                nav.style.background = "rgba(255,255,255,0.9)";
+                nav.style.padding = "20px 60px";
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
